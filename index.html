@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blum-date</title>
+    <!-- Boxicon link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Oi&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Smooch+Sans:wght@100..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Open sans", sans-serif;
+        }
+        .hero-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        .blur-overlay {
+            backdrop-filter: blur(8px);
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .animate-slide-in {
+            animation: slideIn 1s ease-out;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-100">
+    <!-- Hero Section with Header -->
+    <section class="h-screen bg-cover bg-center flex flex-col justify-center items-center text-center text-white relative hero-overlay" style="background-image: url('assets/hero.jpg')">
+        <header class="absolute top-0 left-0 w-full flex justify-between items-center p-4 z-10">
+            <img src="logo-placeholder.png" alt="Blum-date Logo" class="h-8 animate-fade-in-up">
+            <div class="flex space-x-4">
+                <a href="#" class="text-pink-500 hover:text-purple-700 animate-fade-in-up bg-gray-200 px-4 py-3 rounded-full font-semibold">
+                    Download App
+                </a>
+            </div>
+        </header>
+        <div class="max-w-3xl mx-auto px-4 z-10">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4 custom-font animate-fade-in-up delay-200">
+                Every Great Love Story Begins with a Simple Hello
+            </h1>
+            <p class="text-lg md:text-xl mb-8 animate-fade-in-up delay-400">
+                Thousands have already found the spark – why not you?
+            </p>
+            <button class="text-pink-500 hover:text-purple-700 animate-fade-in-up bg-gray-200 px-4 py-3 rounded-full font-semibold">
+                Start Your Love Story Today
+            </button>
+        </div>
+    </section>
+
+    <!-- Section 1 -->
+    <section class="flex flex-col md:flex-row items-center py-24 max-w-5xl mx-auto px-4">
+        <div class="text-center md:text-left animate-fade-in-up">
+            <h2 class="text-4xl md:text-4xl font-bold mb-4 custom-font">
+                Love Isn't Waiting – It's Happening Right Now...
+            </h2>
+            <p class="text-lg text-gray-600 mb-6">
+                The Right Person Could Be One Message Away. Don't Delay Your Date!
+            </p>
+            <button class="bg-purple-500 text-white font-semibold py-3 px-6 rounded-full hover:bg-pink-600 transition duration-300 animate-fade-in-up">
+                Don't Miss Your Moment
+            </button>
+        </div>
+        <div class="md:w-1/2 m-8 md:mt-0 flex justify-center">
+            <img src="assets/section1.jpg" alt="Couple at a table" class="rounded-lg w-[400px] h-[450px] animate-fade-in-up delay-200">
+        </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="flex flex-col md:flex-row-reverse items-center py-24 max-w-5xl mx-auto px-4">
+        <div class="text-center md:text-left animate-fade-in-up">
+            <h2 class="text-4xl md:text-4xl font-bold mb-4 custom-font">
+                "Let Them Find You – All It Takes Is One Hello."
+            </h2>
+            <button class="bg-purple-500 text-white font-semibold py-3 px-6 rounded-full hover:bg-pink-600 transition duration-300 animate-fade-in-up">
+                Don't Miss Your Moment
+            </button>
+        </div>
+        <div class="md:w-1/2 m-8 md:mt-0 flex justify-center">
+            <img src="assets/section2.jpg" alt="Hot air balloons" class="rounded-lg w-[400px] h-[450px] animate-fade-in-up delay-200">
+        </div>
+    </section>
+
+    <!-- Section 3: The First Message -->
+    <section class="flex flex-col md:flex-row items-center py-24 max-w-5xl mx-auto px-4">
+        <div class="md:w-1/2 text-center md:text-left animate-fade-in-up">
+            <h2 class="text-4xl md:text-3xl font-bold mb-4 custom-font">
+                THE FIRST MESSAGE. <br>
+                THE FIRST SMILE. <br> 
+                THE BEGINNING OF EVERYTHING.
+            </h2>
+        </div>
+        <div class="md:w-1/2 mt-8 md:mt-0 flex justify-center">
+            <img src="assets/section3.jpg" alt="Couple smiling" class="rounded-lg w-[400px] h-[450px] animate-fade-in-up delay-200">
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="py-24 bg-gray-900 text-white text-center rounded-xl">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-3xl md:text-3xl font-bold mb-2 custom-font animate-fade-in-up">
+                We Found Something <span class="text-purple-500">Beautiful</span>
+            </h2>
+            <p class="text-lg text-gray-400 mb-8 animate-fade-in-up">
+                Three Couples. Three Stories. One thing in common – it all started here.
+            </p>
+            <div class="relative">
+                <div class="carousel-container flex items-center justify-center">
+                    <button class="carousel-btn left-0 bg-gray-600 text-white rounded-full p-2 hover:bg-gray-500 transition duration-300 absolute top-1/2 transform -translate-y-1/2 -left-10 z-10">←</button>
+                    <div class="carousel-slide flex items-center justify-center w-full">
+                        <img src="assets/testimonial1.jpg" alt="Testimonial couple 1" class="rounded-lg w-full h-[450px] object-cover relative">
+                        <div class="absolute bottom-4 left-0 w-full p-4 rounded-lg blur-overlay text-center">
+                            <p class="text-lg italic mb-2">"We both liked each other on Blumdate. Our first date was a picnic under the trees. He made me laugh so hard I forgot to be nervous."</p>
+                            <p class="text-sm text-gray-400">Kendra & Daniel</p>
+                        </div>
+                    </div>
+                    <button class="carousel-btn right-0 bg-gray-600 text-white rounded-full p-2 hover:bg-gray-500 transition duration-300 absolute top-1/2 transform -translate-y-1/2 -right-10 z-10">→</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-24 bg-white text-center">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-3xl md:text-3xl font-bold mb-6 custom-font animate-fade-in-up">
+                Ready to meet someone amazing?
+            </h2>
+            <div class="flex justify-center gap-4">
+                <a href="#" class="bg-black rounded-lg p-2 flex items-center justify-center animate-fade-in-up delay-200">
+                    <i class='bx bxl-apple text-white text-4xl'></i>            
+                    <p class="text-white text-[10px] ml-2">
+                        Download on the <br>
+                        <span class="text-sm">App Store</span>
+                    </p>
+                </a>
+                <a href="#" class="bg-black rounded-lg p-2 flex items-center justify-center animate-fade-in-up delay-400">
+                    <i class='bx bxl-play-store text-white text-4xl'></i>            
+                    <p class="text-white text-[10px] ml-2">
+                        Get it on <br>
+                        <span class="text-sm">Google Play</span>
+                    </p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 px-4">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-6">
+                <div class="flex flex-col items-center sm:items-start gap-4">
+                    <img src="logo-placeholder.png" alt="Blum-date Logo" class="h-8">
+                    <div class="flex flex-wrap justify-center sm:justify-start gap-3 text-center sm:text-left">
+                        <a href="#" class="text-xs sm:text-sm hover:text-gray-400 font-semibold">Terms of Service</a>
+                        <a href="#" class="text-xs sm:text-sm hover:text-gray-400 font-semibold">Privacy Policy</a>
+                        <a href="#" class="text-xs sm:text-sm hover:text-gray-400 font-semibold">Copyright Policy</a>
+                        <a href="#" class="text-xs sm:text-sm hover:text-gray-400 font-semibold">Cookies Policy</a>
+                        <a href="#" class="text-xs sm:text-sm hover:text-gray-400 font-semibold">Safe Dating Tips</a>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center sm:items-end gap-4">
+                    <div class="flex flex-wrap justify-center sm:justify-end gap-3 text-center sm:text-right">
+                        <a href="#" class="text-xs sm:text-sm hover:text-gray-400 font-semibold">Reporting Tab</a>
+                        <a href="#" class="text-xs sm:text-sm hover:text-gray-400 font-semibold">Community Guidelines</a>
+                        <a href="#" class="text-xs sm:text-sm hover:text-gray-400 font-semibold">Contact Us</a>
+                    </div>
+                    <div class="flex flex-row justify-center gap-4">
+                        <a href="#"><i class='bx bxl-facebook text-white text-xl hover:text-gray-400'></i></a>
+                        <a href="#"><i class='bx bxl-instagram text-white text-xl hover:text-gray-400'></i></a>
+                        <a href="#"><i class='bx bxl-twitter text-white text-xl hover:text-gray-400'></i></a>
+                        <a href="#"><i class='bx bxl-youtube text-white text-xl hover:text-gray-400'></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="text-xs sm:text-sm mt-12">Copyright © 2025 Blumdate. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const slides = [
+            {
+                image: "assets/testimonial1.jpg",
+                quote: "We both liked each other on Blumdate. Our first date was a picnic under the trees. He made me laugh so hard I forgot to be nervous.",
+                author: "Kendra & Daniel"
+            },
+            {
+                image: "assets/testimonial2.jpg",
+                quote: "Matched on Blumdate and our first coffee date turned into a lifetime of adventures.",
+                author: "Aisha & Marcus"
+            },
+            {
+                image: "assets/testimonial3.jpg",
+                quote: "Our Blumdate connection led to a dream wedding by the beach.",
+                author: "Lina & Ethan"
+            }
+        ];
+
+        let currentSlide = 0;
+        const carouselSlide = document.querySelector('.carousel-slide');
+        const totalSlides = slides.length;
+
+        function updateSlide() {
+            carouselSlide.innerHTML = `
+                <img src="${slides[currentSlide].image}" alt="Testimonial couple ${currentSlide + 1}" class="rounded-lg w-full h-[450px] object-cover relative">
+                <div class="absolute bottom-4 left-0 w-full p-4 rounded-lg blur-overlay text-center">
+                    <p class="text-lg italic mb-2">${slides[currentSlide].quote}</p>
+                    <p class="text-sm text-gray-400">${slides[currentSlide].author}</p>
+                </div>
+            `;
+        }
+
+        document.querySelectorAll('.carousel-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                if (button.textContent === '←') {
+                    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                } else {
+                    currentSlide = (currentSlide + 1) % totalSlides;
+                }
+                updateSlide();
+            });
+        });
+
+        // Initialize with the first slide
+        updateSlide();
+    </script>
+</body>
+</html>
